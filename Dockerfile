@@ -18,6 +18,7 @@ RUN micromamba create -q -y -c bioconda -c conda-forge -n snakemake \
     eval "$(micromamba shell hook --shell bash)" && \
     micromamba activate /opt/conda/envs/snakemake && \
     micromamba install -c conda-forge singularity && \
+    micromamba install -c conda-forge conda mamba && \
     micromamba clean --all -y 
 
 ENV PATH /opt/conda/envs/snakemake/bin:${PATH}
